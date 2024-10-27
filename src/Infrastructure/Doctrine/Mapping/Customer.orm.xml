@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping
+        xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd"
+>
+    <entity name="App\Domain\Entity\Customer" table="customer">
+        <id name="id" type="customer_id" />
+        <field name="title" enum-type="App\Domain\ValueObject\Enum\CustomerTitle"  />
+        <field name="lastname" length="60"  nullable="true" />
+        <field name="firstname" length="60" nullable="true" />
+        <field name="postalCode" length="10" nullable="true"  />
+        <field name="city" length="100"  nullable="true" />
+        <field name="email" length="100" nullable="true"  />
+    </entity>
+</doctrine-mapping>
